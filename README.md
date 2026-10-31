@@ -1,5 +1,9 @@
 ﻿# gdm-extension for GNOME 51
 
+> [!IMPORTANT]
+> Just a small fix to let the extension run in GNOME 51. All credit to the original authors.
+> This was also a test to learn using Claude Code cloud sessions. For this reason I kept it as a fork.
+
 > [!CAUTION]
 > This extension is **experimental** and primarily tested on Arch Linux with GNOME Shell v42 and v50. It has been rarely tested on Ubuntu and Debian.  
 >
@@ -52,7 +56,7 @@ Ensure the following are installed:
 
 ### Installation
 ```bash
-git clone https://github.com/pratap-panabaka/gse-gdm-extension/
+git clone https://github.com/alessiocpt/gse-gdm-extension
 cd gse-gdm-extension
 sudo ./install.sh
 ```
