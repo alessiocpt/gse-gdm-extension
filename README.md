@@ -1,4 +1,4 @@
-﻿# gdm-extension
+﻿# gdm-extension for Gnome 51
 
 > [!CAUTION]
 > This extension is **experimental** and primarily tested on Arch Linux with GNOME Shell v42 and v50. It has been rarely tested on Ubuntu and Debian.  
