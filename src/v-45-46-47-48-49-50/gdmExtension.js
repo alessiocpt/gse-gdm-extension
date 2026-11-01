@@ -1,4 +1,3 @@
-import Clutter from 'gi://Clutter';
 import GObject from 'gi://GObject';
 import Gio from 'gi://Gio';
 import St from 'gi://St';
@@ -32,8 +31,6 @@ const gdmExtension = GObject.registerClass(
                 icon_name: 'preferences-system-symbolic',
                 style_class: 'system-status-icon',
             }));
-
-            this._box.add_child(new St.Label({text: 'gdm-extension', y_align: Clutter.ActorAlign.CENTER}));
 
             this._order();
         }
