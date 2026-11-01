@@ -12,7 +12,7 @@ const LOGIN_SCREEN_SCHEMA = 'org.gnome.login-screen';
 const dconfLoginSettings = new Gio.Settings({schema_id: LOGIN_SCREEN_SCHEMA});
 
 const logosMenu = async () => {
-    const menu = new PopupMenu.PopupSubMenuMenuItem('Logo (small icon at bottom of login screen)', false);
+    const menu = new PopupMenu.PopupSubMenuMenuItem('Logo', false);
 
     const scrollView = new St.ScrollView();
     const section = new PopupMenu.PopupMenuSection();
