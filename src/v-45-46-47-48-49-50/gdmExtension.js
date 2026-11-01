@@ -10,6 +10,7 @@ import backgroundsMenu from './menus/backgroundsMenu.js';
 import shellThemesMenu from './menus/shellThemesMenu.js';
 import accentColorsMenu from './menus/accentColorsMenu.js';
 import iconThemesMenu from './menus/iconThemesMenu.js';
+import cursorThemesMenu from './menus/cursorThemesMenu.js';
 import fontsMenu from './menus/fontsMenu.js';
 import logosMenu from './menus/logosMenu.js';
 import systemSettingsMenu from './menus/systemSettingsMenu.js';
@@ -41,10 +42,11 @@ const gdmExtension = GObject.registerClass(
             const accentColors = this._createAccentColorsMenu(); // accent colors if they exists
             const shellThemes = await this._createShellThemesMenu(); // creates shell themes menu
             const icons = await this._createIconThemesMenu(); // create icon themes menu
+            const cursors = await this._createCursorThemesMenu(); // create cursor themes menu
             const fonts = await this._createFontsMenu(); // create fonts menu
             const logos = await this._createLogosMenu(); // creat logos menu
 
-            Promise.all([monitors, systemSettings, accentColors, shellThemes, icons, fonts, logos])
+            Promise.all([monitors, systemSettings, accentColors, shellThemes, icons, cursors, fonts, logos])
                 .then(promises => {
                     promises.forEach(promise => {
                         if (promise) {
@@ -77,6 +79,11 @@ const gdmExtension = GObject.registerClass(
 
         async _createIconThemesMenu() {
             let menuItem = await iconThemesMenu();
+            return menuItem;
+        }
+
+        async _createCursorThemesMenu() {
+            let menuItem = await cursorThemesMenu();
             return menuItem;
         }
 
